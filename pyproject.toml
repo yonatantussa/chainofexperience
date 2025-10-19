@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "chain-of-experience"
+version = "0.1.0"
+description = "Research prototype: agents that learn from human–computer interaction histories."
+authors = ["Yonatan Tussa <tussayonatan@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "agent" }, { include = "models" }, { include = "scripts" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langgraph = "*"
+langchain-openai = "*"
+playwright = "*"
+fastapi = "^0.115.0"
+uvicorn = {extras = ["standard"], version="*"}
+sqlite-utils = "*"
+sentence-transformers = "*"
+torch = "*"
+torchvision = "*"
+pydantic = "^2.8.0"
+python-dotenv = "^1.0.1"
+pillow = "*"
+httpx = "*"
+numpy = "*"
+matplotlib = "*"
+scikit-learn = "*"
+open-clip-torch = "*"
+peft = "*"
+transformers = "*"
+opencv-python = "*"
+seaborn = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+ruff = "^0.6.0"
+black = "^24.8.0"
+mypy = "^1.11.0"
+pre-commit = "^3.8.0"
+
+[tool.poetry.scripts]
+coexp-demo = "scripts.demo_capture:main"
+coexp-initdb = "scripts.init_db:main"
+coexp-train = "train:main"
+coexp-eval = "evaluate:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

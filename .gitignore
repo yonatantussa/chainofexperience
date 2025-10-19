@@ -1,0 +1,52 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# Data and outputs
+data/
+.traces/
+*.sqlite
+*.db
+
+# Playwright
+playwright/.local-browsers
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Claude
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+.cache/
+
+# Planning and notes
+PLANNING.md
+NOTES.md
+TODO.md
+
+# Old
+v1_legacy/
